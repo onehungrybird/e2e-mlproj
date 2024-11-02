@@ -30,7 +30,7 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/src
         run: |
-          pytest src/tests/
+          PYTHONPATH=src pytest src/tests/
 
       - name: Build Docker image
         run: |

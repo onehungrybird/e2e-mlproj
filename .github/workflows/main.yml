@@ -26,14 +26,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Debug Environment
+      - name: Create and set permissions for mlruns directory
         run: |
-          echo "Current directory: $(pwd)"
-          ls -R
+          mkdir -p mlruns
+          chmod 777 mlruns  # Full permissions for troubleshooting
 
       - name: Run MLflow Training
-        env:
-            MLFLOW_TRACKING_URI: ""
         run: |
             python -m src.model.train_model --rootdir=src
 

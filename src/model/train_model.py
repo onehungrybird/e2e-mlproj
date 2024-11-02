@@ -44,7 +44,7 @@ params = {
 # mlflow.set_tracking_uri(r"file:///C:/Users/sahuman/Downloads/mlproj/mlruns")
 # mlflow.set_tracking_uri("file:///C:/Users/sahuman/Downloads/mlproj/mlruns")
 
-tracking_uri = os.path.join("mlruns")
+tracking_uri = os.path.join(".", "mlruns")
 os.makedirs(tracking_uri, exist_ok=True)
 mlflow.set_tracking_uri(tracking_uri)
 

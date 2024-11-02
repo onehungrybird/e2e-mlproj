@@ -5,6 +5,9 @@ import pickle
 from sklearn.linear_model import LinearRegression
 from src.data_prep.data_utils import load_data, preprocess_data
 from sklearn.model_selection import train_test_split
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load and preprocess data
 data = load_data('data/sales_data.csv')
@@ -33,4 +36,4 @@ model.fit(X_train, y_train)
 with open('src/model/sales_model.pkl', 'wb') as model_file:
     pickle.dump(model, model_file)
 
-print("Model trained and saved successfully.")
+logging.info("Model trained and saved successfully.")

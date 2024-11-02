@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests with PYTHONPATH
         run: |
-          PYTHONPATH=src pytest src/tests/
+          python -m pytest src/tests --rootdir=src
 
       - name: Build Docker image
         run: |

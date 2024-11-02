@@ -28,6 +28,7 @@ jobs:
  
       - name: Run MLflow Training
         env:
+            PYTHONPATH: "${{ github.workspace }}/src"
             MLFLOW_TRACKING_URI: "file://${{ github.workspace }}/mlruns"
         run:
             export PYTHONPATH="${PYTHONPATH}:${{ github.workspace }}/src"

@@ -30,7 +30,7 @@ jobs:
         env:
             MLFLOW_TRACKING_URI: "file://${{ github.workspace }}/mlruns"
         run:
-            python -m src/model/train_model.py --rootdir=src
+            python src/model/train_model.py --rootdir=src
 
       - name: Run tests with PYTHONPATH
         run: |

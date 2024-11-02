@@ -26,9 +26,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run tests
-        env:
-          PYTHONPATH: ${{ github.workspace }}/src
+      - name: Run tests with PYTHONPATH
         run: |
           PYTHONPATH=src pytest src/tests/
 
@@ -48,5 +46,5 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker tag sales_forecasting YOUR_DOCKER_USERNAME/sales_forecasting:latest
-          docker push YOUR_DOCKER_USERNAME/sales_forecasting:latest
+          docker tag sales_forecasting ${{ secrets.DOCKER_USERNAME }}/sales_forecasting:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/sales_forecasting:latest

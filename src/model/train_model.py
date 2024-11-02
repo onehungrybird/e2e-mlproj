@@ -9,7 +9,10 @@ import logging
 import mlflow
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.ensemble import RandomForestRegressor
-import os
+import os, sys
+
+# Add the 'src' directory to PYTHONPATH
+sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

@@ -40,7 +40,8 @@ params = {
 }
 
 # Set MLflow tracking URI to a local directory within the project
-mlflow.set_tracking_uri("file://" + os.path.join(os.getcwd(), "mlruns"))
+# mlflow.set_tracking_uri("file://" + os.path.join(os.getcwd(), "mlruns"))
+mlflow.set_tracking_uri(r"file:///C:/Users/sahuman/Downloads/mlproj/mlruns")
 
 # Create a new MLflow Experiment
 mlflow.set_experiment("MLflow Quickstart")

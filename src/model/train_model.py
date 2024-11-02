@@ -9,6 +9,7 @@ import logging
 import mlflow
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.ensemble import RandomForestRegressor
+import os
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -32,8 +33,11 @@ X_test.to_csv('data/X_test.csv', index=False)
 y_test.to_csv('data/y_test.csv', index=False)
 
 params = {
-    "n_estimators": 50,
+    "n_estimators": 50
 }
+
+# Set MLflow tracking URI to a local directory within the project
+mlflow.set_tracking_uri("file://" + os.path.join(os.getcwd(), "mlruns"))
 
 # Create a new MLflow Experiment
 mlflow.set_experiment("MLflow Quickstart")

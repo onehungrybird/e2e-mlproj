@@ -31,7 +31,6 @@ jobs:
             PYTHONPATH: "${{ github.workspace }}/src"
             MLFLOW_TRACKING_URI: "file://${{ github.workspace }}/mlruns"
         run:
-            export PYTHONPATH="${PYTHONPATH}:${{ github.workspace }}/src"
             python src/model/train_model.py
 
       - name: Run tests with PYTHONPATH

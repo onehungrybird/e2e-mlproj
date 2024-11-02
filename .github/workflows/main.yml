@@ -26,14 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: List Files
-        run: |
-        echo "Current directory: $(pwd)"
-        ls -R
-
       - name: Run MLflow Training
         env:
-            PYTHONPATH: "${{ github.workspace }}/src"
+            PYTHONPATH: "${{ github.workspace }}/src/model"
             MLFLOW_TRACKING_URI: "file://${{ github.workspace }}/mlruns"
         run:
             python src/model/train_model.py --rootdir=src

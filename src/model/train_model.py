@@ -42,7 +42,10 @@ params = {
 # Set MLflow tracking URI to a local directory within the project
 # mlflow.set_tracking_uri("file://" + os.path.join(os.getcwd(), "mlruns"))
 # mlflow.set_tracking_uri(r"file:///C:/Users/sahuman/Downloads/mlproj/mlruns")
-mlflow.set_tracking_uri("file:///C:/Users/sahuman/Downloads/mlproj/mlruns")
+# mlflow.set_tracking_uri("file:///C:/Users/sahuman/Downloads/mlproj/mlruns")
+
+tracking_uri = os.path.join(os.getcwd(), "mlruns")
+os.makedirs(tracking_uri, exist_ok=True)
 
 # Create the mlruns directory if it doesn't exist
 os.makedirs("C:/Users/sahuman/Downloads/mlproj/mlruns", exist_ok=True)

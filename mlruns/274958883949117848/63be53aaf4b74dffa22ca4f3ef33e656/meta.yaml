@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/sahuman/Downloads/mlproj/mlruns/274958883949117848/63be53aaf4b74dffa22ca4f3ef33e656/artifacts
+end_time: 1730548618422
+entry_point_name: ''
+experiment_id: '274958883949117848'
+lifecycle_stage: active
+run_id: 63be53aaf4b74dffa22ca4f3ef33e656
+run_name: overjoyed-calf-637
+run_uuid: 63be53aaf4b74dffa22ca4f3ef33e656
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730548611611
+status: 3
+tags: []
+user_id: sahuman

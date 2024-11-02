@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/sahuman/Downloads/mlproj/mlruns/274958883949117848/f944a2f63c034b06b965bc67b44d0659/artifacts
+end_time: 1730548425433
+entry_point_name: ''
+experiment_id: '274958883949117848'
+lifecycle_stage: active
+run_id: f944a2f63c034b06b965bc67b44d0659
+run_name: gifted-hog-412
+run_uuid: f944a2f63c034b06b965bc67b44d0659
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730548421484
+status: 3
+tags: []
+user_id: sahuman

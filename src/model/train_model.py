@@ -44,6 +44,8 @@ params = {
 # mlflow.set_tracking_uri(r"file:///C:/Users/sahuman/Downloads/mlproj/mlruns")
 mlflow.set_tracking_uri("file:///C:/Users/sahuman/Downloads/mlproj/mlruns")
 
+# Create the mlruns directory if it doesn't exist
+os.makedirs("C:/Users/sahuman/Downloads/mlproj/mlruns", exist_ok=True)
 
 # Create a new MLflow Experiment
 mlflow.set_experiment("MLflow Quickstart")

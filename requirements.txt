@@ -1,4 +1,0 @@
-mlflow
-ipykernel
-scikit-learn
-dvc
